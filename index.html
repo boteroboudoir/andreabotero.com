@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrea Botero</title>
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="images/favicon.png" type="image/png">
     <style>
         /* Global styling */
         body, html {
@@ -25,11 +25,11 @@
 
         /* Typewriter effect */
         .typewriter {
-            font-size: 1.8em;
+            font-size: 2em;
             overflow: hidden;
             white-space: nowrap;
             border-right: 3px solid black;
-            animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+            animation: typing 5s steps(40, end), blink-caret 0.8s step-end infinite;
         }
         @keyframes typing {
             from { width: 0; }
@@ -46,9 +46,10 @@
             to { opacity: 0; }
         }
         .fade-out {
-            animation: fadeOut 1s forwards;
+            animation: fadeOut 1.5s forwards;
         }
 
+        /* Main content styling */
         .main-content {
             display: none;
             background-color: black;
@@ -56,11 +57,13 @@
             height: 100vh;
             text-align: center;
             padding-top: 20px;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.2em;
         }
 
-        /* Contact info styling */
-        .main-content p {
-            font-size: 1.5em;
+        .main-content h1 {
+            font-size: 1.8em;
             margin: 0;
         }
         .contact-info {
@@ -72,16 +75,17 @@
 <body>
 
 <div class="entering-screen">
-    <div class="typewriter">Now Entering... The Archive, © Andrea Botero</div>
+    <div class="typewriter">Now Entering... The Archive, © Andrea Botero.</div>
 </div>
 
 <div class="main-content">
-    <p>The Archives will soon be yours.</p>
+    <h1>The Archives will soon be yours.</h1>
     <div class="contact-info">
         <p>Reach out to Andrea's team at:</p>
-        <p>Instagram: @andreaboterofficial</p>
+        <p>Instagram: andreaboterofficial</p>
         <p>Facebook: Andrea Botero</p>
     </div>
+    <p style="margin-top: 20px;">© All rights reserved</p>
 </div>
 
 <script>
@@ -91,8 +95,8 @@
         setTimeout(() => {
             document.querySelector('.entering-screen').style.display = 'none';
             document.querySelector('.main-content').style.display = 'flex';
-        }, 1000);
-    }, 4000); // Total time for typewriter effect plus fade-out delay
+        }, 1500);
+    }, 5500); // Total time for typewriter effect plus fade-out delay
 </script>
 
 </body>
